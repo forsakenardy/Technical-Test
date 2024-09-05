@@ -6,6 +6,12 @@ body {
     background-size: 1500px 100vh;
 }
 
+form {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
 h1 {
     text-shadow: 
     1px 1px 0 #3e3c3c,

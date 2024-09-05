@@ -66,7 +66,7 @@ function HomePage() {
           type="text"
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
-          placeholder="Buscar Pokémon por nombre..."
+          placeholder="Find by name"
         />
         <button type="submit">Buscar</button>
       </form>
