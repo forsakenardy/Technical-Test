@@ -16,3 +16,9 @@
 .pokemon-name {
     margin-top: -10px;
 }
+
+@media (min-width: 680px) {
+    .poke-img {
+        width: 15%;
+    }
+}

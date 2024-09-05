@@ -23,6 +23,10 @@ h1 {
     -1px 1px 0 #3e3c3c;
 }
 
+p {
+    font-size: 20px;
+}
+
 a {
     text-decoration: none;
     color: white;
