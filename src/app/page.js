@@ -2,12 +2,15 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 function HomePage() {
 
   const [pokemons, setPokemons] = useState([]);
   const [next, setNext] = useState('https://pokeapi.co/api/v2/pokemon?limit=20');
   const [fetching, setFetching] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
+  const router = useRouter();
 
   useEffect(() => {
 
@@ -48,9 +51,25 @@ function HomePage() {
     }
   };
 
+  const handleSearch = (e) => {
+    e.preventDefault();
+    if (searchQuery) {
+      router.push(`/Details/${searchQuery.toLowerCase()}`); // Redireccionar a la página de detalles del Pokémon
+    }
+  };
+
 
   return (
     <div className='container'>
+            <form onSubmit={handleSearch}>
+        <input
+          type="text"
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+          placeholder="Buscar Pokémon por nombre..."
+        />
+        <button type="submit">Buscar</button>
+      </form>
       <h1>Pokémon List</h1>
         <ul className='poke-list'>
           {pokemons.map((pokemon, index) => (
