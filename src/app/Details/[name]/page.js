@@ -28,15 +28,18 @@ function Details() {
   }
 
   return (
-    <div>
+    <div className='container' >
+      <img className='poke-img' src={pokemon.sprites.front_default} alt={`${pokemon.name} front`} />
+      <img className='poke-img' src={pokemon.sprites.front_shiny} alt={`${pokemon.name} shiny`} />
       <h1>{pokemon.name}</h1>
-      <img src={pokemon.sprites.front_default} alt={`${pokemon.name} front`} />
-      <img src={pokemon.sprites.front_shiny} alt={`${pokemon.name} shiny`} />
+      <div className='details'>
       <p>ID: {pokemon.id}</p>
       <p>Weight: {pokemon.weight}</p>
       <p>Height: {pokemon.height}</p>
       <p>Abilities: {pokemon.abilities.map(a => a.ability.name).join(', ')}</p>
       <p>Stats: {pokemon.stats.map(s => `${s.stat.name}: ${s.base_stat}`).join(', ')}</p>
+      </div>
+
     </div>
   );
 };

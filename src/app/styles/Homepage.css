@@ -1,0 +1,68 @@
+body {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    background-image: url("https://wallpaperaccess.com/full/4046682.png");
+    background-size: 1500px 100vh;
+}
+
+h1 {
+    text-shadow: 
+    1px 1px 0 #3e3c3c,
+    -1px -1px 0 #3e3c3c,
+    1px -1px 0 #3e3c3c,
+    -1px 1px 0 #3e3c3c;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    text-shadow: 
+    1px 1px 0 #000,
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000;
+}
+
+
+
+.container {
+    border: 3px solid black ;
+    width: 80vw;
+    height: calc(100vh - 246px);
+    background-color: rgba(44, 75, 69, 0.7);
+    margin-top: 120px;
+    margin-left: 10vw;
+    text-align: center;
+}
+.pokeball1 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 120px;
+}
+.pokeball2 {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 120px;
+}
+.poke-list {
+    text-align: start;
+    list-style: none;
+    background-color: rgba(240, 248, 255, 0.2);
+    margin: 0 5vw 5vh 5vw;
+    height: calc(80vh - 266px);
+    overflow-y: auto;
+    font-size: 22px;
+}
+li :hover {
+    transition: 0.4s;
+    font-size: 30px;
+}
+
+.load {
+    border: 3px solid black ;
+    width: 100px;
+    height: 30px;
+}

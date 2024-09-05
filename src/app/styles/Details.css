@@ -1,0 +1,14 @@
+
+.poke-img {
+    width: 50%;
+}
+.details {
+    background-color:rgba(240, 248, 255, 0.2);
+    margin-left: 5vw;
+    margin-right: 5vw;
+    padding-left: 5vw;
+    height: calc(65vh - 266px);
+    overflow-y: auto;
+    text-align: start;
+
+}

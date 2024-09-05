@@ -50,19 +50,20 @@ function HomePage() {
 
 
   return (
-    <div>
+    <div className='container'>
       <h1>Pokémon List</h1>
-        <ul>
+        <ul className='poke-list'>
           {pokemons.map((pokemon, index) => (
             <li key={index}>           
              <Link href={`/Details/${pokemon.name}`}>{pokemon.name}</Link>
              </li>
           ))}
         </ul>
-        <button onClick={loadMore}>
+        <button className='load' onClick={loadMore}>
           Load More
         </button>
-
+        <img className="pokeball1" src="https://th.bing.com/th/id/R.a3ec35371287e126c74d176b810b4c6d?rik=kd8k%2fIwKA7LWTg&riu=http%3a%2f%2fpluspng.com%2fimg-png%2fpokemon-go-png-there-s-something-you-can-do-to-try-to-enhance-your-pokemon-go-experience-maybe-you-want-to-know-of-things-like-how-to-catch-pikachu-as-your-first-pokemon-400.png&ehk=VOKvR7cnIXFMy4pNKWSXnPVIuvmik1hKGRujWYBR%2fgs%3d&risl=&pid=ImgRaw&r=0" alt="" />
+        <img className="pokeball2" src="https://2.bp.blogspot.com/-iIPEjC_wjL4/WnjPYcy0iQI/AAAAAAAHd5s/jbrmjTiP61YGB5yR6pLuOGEX-9pr9nOeACLcBGAs/s1600/POKEBALL%2B%25281%2529.png" alt="" />
     </div>
   );
 }
