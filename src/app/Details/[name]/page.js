@@ -1,9 +1,10 @@
 
 function Details() {
-    return (
-      <div >asd</div>
-    );
-  }
-  
-  export default Details
-  
+
+  return(
+    <div>asdasd</div>
+  )
+}
+
+export default Details
+

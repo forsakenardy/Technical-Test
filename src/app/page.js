@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 
 function HomePage() {
 
@@ -53,7 +54,9 @@ function HomePage() {
       <h1>Pokémon List</h1>
         <ul>
           {pokemons.map((pokemon, index) => (
-            <li key={index}>{pokemon.name}</li>
+            <li key={index}>           
+             <Link href={`/Details/${pokemon.name}`}>{pokemon.name}</Link>
+             </li>
           ))}
         </ul>
         <button onClick={loadMore}>
