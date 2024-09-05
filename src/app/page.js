@@ -10,6 +10,22 @@ function HomePage() {
 
   useEffect(() => {
 
+    const initialPokemons = () => {
+      fetch(next)
+        .then((response) => response.json())
+        .then((data) => {
+          setPokemons(data.results);
+          setNext(data.next);
+        })
+        .catch((err) => {
+          console.error("Error fetching Pokémon: ", err);
+        });
+    };
+    initialPokemons();
+  }, []);
+
+  useEffect(() => {
+
     if (!fetching) return
 
     fetch(next)
