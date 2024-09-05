@@ -5,20 +5,32 @@ import { useState, useEffect } from 'react';
 function HomePage() {
 
   const [pokemons, setPokemons] = useState([]);
+  const [next, setNext] = useState('https://pokeapi.co/api/v2/pokemon?limit=20');
+  const [fetching, setFetching] = useState(false);
 
   useEffect(() => {
 
-    fetch('https://pokeapi.co/api/v2/pokemon?limit=20')
+    if (!fetching) return
+
+    fetch(next)
       .then((response) => response.json())
       .then((data) => {
-        console.log("pokemon list", data);
-        setPokemons(data.results);
+        setPokemons((prevList) => [...prevList, ...data.results]); 
+        setNext(data.next);
+        setFetching(false);
       })
       .catch((err) => {
         console.error("Error fetching Pokémon: ", err);
       })
 
-  }, []);
+  }, [fetching, next]);
+
+  const loadMore = () => {
+    if (next) {
+      setFetching(true)
+    }
+  };
+
 
   return (
     <div>
@@ -28,7 +40,7 @@ function HomePage() {
             <li key={index}>{pokemon.name}</li>
           ))}
         </ul>
-        <button>
+        <button onClick={loadMore}>
           Load More
         </button>
 
