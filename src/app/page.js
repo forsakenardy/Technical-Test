@@ -28,6 +28,9 @@ function HomePage() {
             <li key={index}>{pokemon.name}</li>
           ))}
         </ul>
+        <button>
+          Load More
+        </button>
 
     </div>
   );
