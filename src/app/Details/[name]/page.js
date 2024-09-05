@@ -11,12 +11,12 @@ function Details() {
 
   useEffect(() => {
     fetch(`https://pokeapi.co/api/v2/pokemon/${name}`)
-      .then((response) =>  response.json())
+      .then((response) => response.json())
       .then((data) => {
         console.log(data);
         setPokemon(data);
       })
-     
+
       .catch((error) => {
         console.error('Error fetching Pokémon data:', error);
         setPokemon(null);
@@ -30,7 +30,13 @@ function Details() {
   return (
     <div>
       <h1>{pokemon.name}</h1>
-
+      <img src={pokemon.sprites.front_default} alt={`${pokemon.name} front`} />
+      <img src={pokemon.sprites.front_shiny} alt={`${pokemon.name} shiny`} />
+      <p>ID: {pokemon.id}</p>
+      <p>Weight: {pokemon.weight}</p>
+      <p>Height: {pokemon.height}</p>
+      <p>Abilities: {pokemon.abilities.map(a => a.ability.name).join(', ')}</p>
+      <p>Stats: {pokemon.stats.map(s => `${s.stat.name}: ${s.base_stat}`).join(', ')}</p>
     </div>
   );
 };
