@@ -21,7 +21,15 @@ function HomePage() {
   }, []);
 
   return (
-    <div ></div>
+    <div>
+      <h1>Pokémon List</h1>
+        <ul>
+          {pokemons.map((pokemon, index) => (
+            <li key={index}>{pokemon.name}</li>
+          ))}
+        </ul>
+
+    </div>
   );
 }
 
