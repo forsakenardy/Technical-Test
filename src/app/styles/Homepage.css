@@ -11,6 +11,9 @@ form {
     top: 20px;
     right: 20px;
 }
+input {
+    width: 100px;
+}
 
 h1 {
     text-shadow: 
