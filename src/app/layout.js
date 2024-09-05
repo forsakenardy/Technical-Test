@@ -1,4 +1,4 @@
-import "./styles/HomePage.css";
+import "./styles/Homepage.css";
 import "./styles/Details.css"
 
 export default function RootLayout({ children }) {
