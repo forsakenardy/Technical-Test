@@ -1,7 +1,7 @@
 
 function Details() {
     return (
-      <div ></div>
+      <div >asd</div>
     );
   }
   
