@@ -74,10 +74,11 @@ function HomePage() {
         <ul className='poke-list'>
           {pokemons.map((pokemon, index) => (
             <li key={index}>           
-             <Link href={`/Details/${pokemon.name}`}>{pokemon.name}</Link>
+             <Link href={`/Details/${pokemon.name}`}>{index +1} - {pokemon.name}</Link>
              </li>
           ))}
         </ul>
+        <p className='from'>1...{pokemons.length}</p>
         <button
         className='load'
         onClick={loadMore}

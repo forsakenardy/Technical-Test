@@ -16,11 +16,7 @@ input {
 }
 
 h1 {
-    text-shadow: 
-    1px 1px 0 #3e3c3c,
-    -1px -1px 0 #3e3c3c,
-    1px -1px 0 #3e3c3c,
-    -1px 1px 0 #3e3c3c;
+    color: white;
 }
 
 p {
@@ -65,7 +61,7 @@ a {
     list-style: none;
     background-color: rgba(240, 248, 255, 0.2);
     margin: 0 5vw 5vh 5vw;
-    height: calc(80vh - 266px);
+    height: calc(76vh - 286px);
     overflow-y: auto;
     font-size: 22px;
 }
@@ -78,4 +74,8 @@ li :hover {
     border: 3px solid black ;
     width: 100px;
     height: 30px;
+}
+.from {
+    margin-top: -20px;
+    color: white;
 }
